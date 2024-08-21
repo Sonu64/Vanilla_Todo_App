@@ -207,7 +207,7 @@ button:active {
   
   /* Modal Content/Box */
   .modal-content {
-    background-color: #272626;
+    background-color: #282828;
     margin: 15% auto; /* 15% from the top and centered */
     padding: 52px 0px;
     border: 2px solid #888;
@@ -256,6 +256,13 @@ button:active {
     .card {
         width: 80%;
     }
+    .modal-content {
+        width: 95%;
+        gap: 20px;
+    }
+    .modal-content button {
+        padding: 8px 25px;
+    }
   }
 
   /** Mobile Screens **/
@@ -272,5 +279,42 @@ button:active {
     }
     #emptyPlaceholder {
         font-size: 1rem;
+    }
+    .task {
+        font-size: 1rem;
+    }
+    #tasks div {
+        gap: 10px;
+    }
+    .task .doneBtn, .task .removeBtn, .task .editBtn {
+        font-size: 0.8rem;
+        height: 40px;
+        width: 40px;
+    }
+    .modal-content {
+        width: 95%;
+        gap: 20px;
+    }
+    .modal-content input {
+        width: 50%;
+        font-size: 1rem;
+    }
+    .modal-content button {
+        padding: 6px 20px;
+        font-size: 1rem;
+    }
+  }
+
+  /**Only changing modal in screens > 1000px **/
+  @media only screen and (min-width: 1001px) and (max-width: 1350px) {
+    .card {
+        width: 80%;
+    }
+    .modal-content {
+        width: 70%;
+        gap: 20px;
+    }
+    .modal-content button {
+        padding: 8px 25px;
     }
   }
