@@ -1,0 +1,276 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+
+body {
+   
+    display: flex;
+    justify-content: center;
+    background-color: #F4EEE0;
+}
+
+
+.card {
+    width: 40%;
+    overflow: hidden;
+    margin-top: 80px;
+    border-radius: 15px;
+    box-shadow: 0 20px 40px #0505058a;
+    background: transparent;
+}
+
+.app {
+    background-color: #4F4557;
+    padding: 30px 0px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+
+
+.heading h1 {
+    background-color: #393646;
+    color: whitesmoke;
+    font-size: 1.7rem;
+    border-radius: 20px 20px 0px 0px;
+    text-align: center;
+    padding: 20px 0px;
+}
+
+
+#emptyPlaceholder {
+    text-align: center;
+}
+
+
+
+
+#task {
+    font-size: 1.2rem;
+    background: transparent;
+    outline: none;
+    font-weight: 600;
+    border: none;
+    border-bottom: 3px solid white;
+    padding-left: 15px;
+    color: whitesmoke;
+    width: 30%;
+}
+
+#btn {
+    background-color: rgb(119, 3, 234);
+    color: white;
+    padding: 10px 60px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border: none;
+    box-shadow: 0 5px 15px #050505;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+#btn:hover {
+    background-color: rgb(110, 0, 220);
+}
+
+#btn:active {
+    box-shadow: 0 5px 5px #050505;
+}
+
+.container {
+    overflow: hidden;
+    border-radius: 0px 0px 15px 15px;
+}
+
+#tasks {
+    background-color: #6D5D6E;
+    color: white;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+#tasks::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Background of the scrollbar track */
+    border-radius: 10px; /* Match the border-radius */
+}
+
+#tasks::-webkit-scrollbar-thumb {
+    background: #888; /* Color of the scrollbar thumb */
+    border-radius: 10px; /* Match the border-radius */
+}
+
+.task {
+    font-size: 1.19rem;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 500;
+    align-items: center;
+    gap: 15px;
+    transition: 0.4s ease;
+}
+
+.task .doneBtn {
+    border: 3px solid #00c365;
+    color: white;
+    width: 52px;
+    height: 52px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    box-shadow: 0 3px 15px #050505;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.task .removeBtn {
+    border: 3px solid #ff3b3b;
+    color: white;
+    font-size: 1rem;
+    width: 52px;
+    height: 52px;
+    font-size: 1rem;
+    box-shadow: 0 3px 15px #050505;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.task .editBtn {
+    border: 3px solid #0088ff;
+    color: white;
+    font-size: 1rem;
+    width: 52px;
+    height: 52px;
+    font-size: 1rem;
+    box-shadow: 0 3px 15px #050505;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.2s ease;   
+}
+
+.removeBtn:hover {
+    background-color: #ff3b3b50;
+}
+.doneBtn:hover {
+    background-color: #00c36550;  
+}
+.editBtn:hover {
+    background-color: #0088ff50;
+}
+.doneBtn:active, .removeBtn:active, .editBtn:active {
+    box-shadow: 0 5px 5px #050505;
+}
+
+#tasks div {
+    display: flex;
+    gap: 20px;
+}
+
+button {
+    transition: 0.2s ease;
+}
+
+button:active {
+    box-shadow: 0 3px 10px #050505;
+}
+
+.hiddenTask {
+    background-color: red;
+}
+
+
+
+
+
+/** MODAL BOX STYLING **/
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.898); /* Black w/ opacity */
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #272626;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 52px 0px;
+    border: 2px solid #888;
+    width: 40%; /* Could be more or less, depending on screen size */
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    border-radius: 15px;
+  }
+
+  .modal-content input {
+    font-size: 1.2rem;
+    background: transparent;
+    outline: none;
+    font-weight: 600;
+    border: none;
+    border-bottom: 3px solid white;
+    padding-left: 15px;
+    color: whitesmoke;
+  }
+
+  .modal-content button {
+    background-color: rgb(0, 155, 116);
+    color: white;
+    padding: 10px 40px;
+    font-size: 1.1rem;
+    border: none;
+    font-weight: 600;
+    box-shadow: 0 5px 15px #050505;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: 0.2s ease;
+  }
+  
+  .modal-content button:active {
+    box-shadow: 0 5px 5px #050505;
+  }
+
+  #emptyPlaceholder {
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
+
+  /** Tablet Screens **/
+  @media only screen and (min-width: 481px) and (max-width: 1000px) {
+    .card {
+        width: 80%;
+    }
+  }
+
+  /** Mobile Screens **/
+  @media only screen and (max-width: 480px) {
+    .card {
+        width: 98%;
+    }
+    #btn {
+        padding: 5px 50px;
+        font-size: 1rem;
+    }
+    #task {
+        font-size: 1rem;
+    }
+    #emptyPlaceholder {
+        font-size: 1rem;
+    }
+  }
